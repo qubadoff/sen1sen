@@ -1,0 +1,11 @@
+<svg width="500" height="900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M0 0h500v900H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <ellipse fill="#FFDD0F" mask="url(#b)" cx="28" cy="450" rx="472" ry="450"/>
+    </g>
+</svg>

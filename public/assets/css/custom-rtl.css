@@ -1,0 +1,26 @@
+.toggle .discount .discount-text::before{
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+form.newsletter .field-note li::before{
+    content: '';
+    display: none;
+}
+form.newsletter .field-note li::after {
+    content: "\f00c";
+    font-family: "Line Awesome Free";
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 12px;
+    vertical-align: -2px;
+}
+a.button .la-long-arrow-alt-right{
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
