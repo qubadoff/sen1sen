@@ -114,9 +114,9 @@ class GeneralController extends Controller
             'information.max' => 'Information Max 5000 !'
         ]);
 
-        $path = 'cv/August2023/';
+        $path = 'cv/September2023/';
 
-        $cvFile = $request->file('cv_files');
+        $cvFile = $request->file('cv_file');
         $cvVideo = $request->file('cv_video');
 
         $cvFileName = md5(time().'-'. $request->file('cv_file')->getClientOriginalName());
@@ -132,6 +132,11 @@ class GeneralController extends Controller
             $save = new Cv();
             $save->name = $request->input('name');
             $save->surname = $request->input('surname');
+            $save->father_name = $request->input('father_name');
+            $save->education_school_name = $request->input('education_school_name');
+            $save->speciality = $request->input('speciality');
+            $save->computer_skills = $request->input('computer_skills');
+            $save->hobby = $request->input('hobby');
             $save->age = $request->input('age');
             $save->education = $request->input('education');
             $save->experience = $request->input('experience');
