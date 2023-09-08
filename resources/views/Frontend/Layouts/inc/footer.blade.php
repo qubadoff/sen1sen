@@ -7,41 +7,34 @@
                     <div class="col-lg-3">
                         <div class="footer-item footer-about">
                             <div class="logo">
-                                <a href="index-2.html">
+                                <a href="{{ route("index") }}">
                                     <h2>
-                                        Sen1Sen
+                                        {{__("Sen1Sen")}}
                                     </h2>
                                 </a>
                             </div>
-                            <p>A amazing WordPress theme designed specifically for a  startup, apps, business, SaaS, and IT services.</p>
+                            <p>
+                                {{__("Gənclərin keçmişini araşdırmaq, bu gününü qiymətləndirmək üçün yox, gələcəyini qurmaq üçün var.")}}
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <div class="footer-item footer-menu">
-                            <h6>{{__("Company")}}</h6>
+                            <h6>{{__("Keçidlər")}}</h6>
                             <ul>
-                                <li><a href="about-company.html" title="About us">{{__("Home")}}</a></li>
-                                <li><a href="blog-simple-grid.html" title="Blog">{{__("About us")}}</a></li>
-                                <li><a href="careers.html" title="Careers">{{__("Our Projects")}}</a></li>
-                                <li><a href="contact-01.html" title="Contact">{{__("Video CV")}}</a></li>
+                                <li><a href="{{ route("index") }}" title="Ana Səhifə">{{__("Ana Səhifə")}}</a></li>
+                                <li><a href="{{ route("about") }}" title="Haqqımızda">{{__("Haqqımızda")}}</a></li>
+                                <li><a href="{{ route("projects") }}" title="Our Projects">{{__("Proyektlərimiz")}}</a></li>
+                                <li><a href="{{ route("cv") }}" title="Video CV">{{__("Video CV")}}</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <div class="footer-item footer-menu">
-                            <h6>{{__("Resources")}}</h6>
-                            <ul>
-                                <li><a href="contact-01.html" title="Downloads">{{__("Documents")}}</a></li>
-                                <li><a href="contact-01.html" title="Partners">{{__("Partners")}}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="footer-item footer-menu">
-                            <h6>{{__("Social Media")}}</h6>
+                            <h6>{{__("Sosial media")}}</h6>
                             <ul>
                                 <li><a href="{{ setting('site.fb') }}" title="Facebook">{{__("Facebook")}}</a></li>
-                                <li><a href="{{ setting('site.twitter') }}" title="Twitter">{{__("Twitter")}}</a></li>
+                                <li><a href="{{ setting('site.twitter') }}" title="Twitter">{{__("Tiktok")}}</a></li>
                                 <li><a href="{{ setting('site.instagram') }}" title="Instagram">{{__("Instagram")}}</a></li>
                                 <li><a href="{{ setting('site.linkedin') }}" title="Linkedin">{{__("Linkedin")}}</a></li>
                             </ul>
@@ -49,16 +42,37 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="footer-item footer-newsletter">
-                            <h6>{{__("Newsletter")}}</h6>
+                            <h6>{{__("Yeniliklər")}}</h6>
                             <p>
-                                {{__("Subcribe our newsletter and stay up to date about the company")}}
+                                {{__("Yeniliklərə abuna olmaq üçün email adresinizi daxil edin.")}}
                             </p>
-                            <form action="#" class="newsletter">
+                            @if(Session::has('success'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('success') }}
+                                    @php
+                                        \Illuminate\Support\Facades\Session::forget('success');
+                                    @endphp
+                                </div>
+                            @endif
+                            @if($errors->any())
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                            @endif
+                            <form method="POST" action="{{ route("subscribers") }}" class="newsletter">
+                                @csrf
+                                @method('POST')
                                 <div class="field-input">
-                                    <input type="email" value="" placeholder="{{__("Email address")}}">
+                                    <input type="email" name="email" value="" placeholder="{{__("Email adresi")}}">
                                 </div>
                                 <div class="field-submit">
-                                    <button>{{__("Subcribe")}}</button>
+                                    <button name="submit" type="submit">{{__("Abunə ol")}}</button>
                                 </div>
                             </form>
                         </div>
@@ -70,11 +84,10 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="inner flex flex-content-sb flex-align-c">
-                <div class="copyright">© Sen1Sen - {{ date("Y") }}</div>
+                <div class="copyright">{{__("Sen1Sen")}} © {{ date("Y") }}</div>
                 <div class="menu">
                     <ul>
-                        <li><a href="privacy-policy.html" title="Terms">{{__("Terms")}}</a></li>
-                        <li><a href="privacy-policy.html" title="Privacy Policy">{{__("Privacy and Policy")}}</a></li>
+                        <li><a href="/privacy-policy" title="Privacy Policy">{{__("Gizlilik və Qaydalar")}}</a></li>
                     </ul>
                 </div>
             </div>

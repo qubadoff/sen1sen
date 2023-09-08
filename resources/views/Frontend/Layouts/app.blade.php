@@ -62,16 +62,6 @@
         </svg>
     </a>
     <!-- END BACK TO TOP -->
-
-    <!-- BEGIN SWITCHER -->
-    <div class="dl-switcher">
-        <div class="item">
-            <span class="state dark" data-text="Dark">Dark</span>
-            <span class="state light" data-text="Light">Light</span>
-        </div>
-        <div class="toddler">Light</div>
-    </div>
-    <!-- END SWITCHER -->
 </div>
 
 <!-- jQuery -->

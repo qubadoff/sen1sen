@@ -1,5 +1,5 @@
 @extends('Frontend.Layouts.app')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Site name"))
+@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Haqqımızda"))
 <br/>
 <br/>
 @section('content')
@@ -11,11 +11,13 @@
                     <div class="col-lg-6">
                         <div class="content pdr80">
                             <div class="heading">
-                                <div class="heading-sub">About Company</div>
-                                <h2 class="heading-title">We help small businesses with big hearts make meaningful hires.</h2>
+                                <div class="heading-sub">{{__("Bizim haqqımızda")}}</div>
+                                <h2 class="heading-title" style="font-size: 40px;">
+                                    {{__("MG-consultinqin bir layihəsi olan S1S biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.")}}
+                                </h2>
                             </div>
                             <div class="button-wrap">
-                                <a href="contact-01.html" class="button fullfield">Get in touch</a>
+                                <a href="{{ route("contact") }}" class="button fullfield">{{__("Bizimlə Əlaqə")}}</a>
                             </div>
                         </div>
                     </div>
@@ -32,13 +34,10 @@
                 <div class="row flex-align-c">
                     <div class="col-lg-6">
                         <div class="text-left pdr80">
-                            <h2>Our Mission</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec vehicula arcu.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-right pdr80">
-                            <p>Vestibulum vitae orci et nisi iaculis commodo vitae eu velit. Nullam id erat in orci consequat aliquam at sed nisi. Nullam consequat leo at justo consectetur, vel vehicula odio consequat. Aliquam accumsan dictum leo sed dignissim.</p>
+                            <h2>{{__("Bizim misiyamız")}}</h2>
+                            <p>
+                                {{__("Gənclərin keçmişini araşdırmaq Bu gününü qiymətləndirmək Yox Bizim işimiz Gələcəklərini qurmaqdlr!")}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -50,26 +49,20 @@
                     <div class="row">
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-box">
-                                <div class="number"><span class="counter">2018</span></div>
-                                <div class="title">Year founded</div>
+                                <div class="number"><span class="counter">2014</span></div>
+                                <div class="title">{{__("ildən fəaliyyətdəyik")}}</div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-box">
-                                <div class="number"><span class="counter">60</span><span class="suffix">+</span></div>
-                                <div class="title">Projects</div>
+                                <div class="number"><span class="counter">20</span><span class="suffix">+</span></div>
+                                <div class="title">{{__("Proyekt")}}</div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
                             <div class="counter-box">
-                                <div class="number"><span class="counter">10</span><span class="suffix">+</span></div>
-                                <div class="title">Awwarts</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="counter-box">
-                                <div class="number"><span class="counter">50</span><span class="suffix">+</span></div>
-                                <div class="title">Team members</div>
+                                <div class="number"><span class="counter">20</span><span class="suffix">+</span></div>
+                                <div class="title">{{__("Komanda əməkdaşı")}}</div>
                             </div>
                         </div>
                     </div>
@@ -80,76 +73,44 @@
             <div class="container">
                 <div class="popup-wrapper ratio" style="--bs-aspect-ratio: 50%">
                     <img src="{{ url('/') }}/assets/images/our-team.jpg" alt="Popup Video">
-                    <a href="#" data-popup="popup-video" class="icon-popup background-navy size-l"><i class="las la-play"></i></a>
+                    <a href="{{ setting('site.video_url') }}" target="_blank" class="icon-popup background-navy size-l"><i class="las la-play"></i></a>
                 </div>
             </div>
         </div>
         <section class="section-team spdtb">
             <div class="container">
                 <div class="heading align-center">
-                    <h2 class="heading-title">Meet our team</h2>
-                    <p>Our people make the difference</p>
+                    <h2 class="heading-title">{{__("Bizim Komanda")}}</h2>
                 </div>
                 <div class="block-team layout-01">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="member-box align-center">
-                                <div class="inner">
-                                    <div class="member-avatar">
-                                        <img src="{{ url('/') }}/assets/images/mem-1.png" alt="Member">
-                                    </div>
-                                    <div class="member-content">
-                                        <h4 class="name">Stéphane Gibert</h4>
-                                        <div class="position">Co-Founder</div>
-                                        <ul class="share">
-                                            <li class="twitter"><a href="#" title="twitter"><i class="lab la-twitter"></i></a></li>
-                                            <li class="linkedin"><a href="#" title="linkedin"><i class="lab la-linkedin-in"></i></a></li>
-                                            <li class="instagram"><a href="#" title="instagram"><i class="lab la-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="member-box align-center">
-                                <div class="inner">
-                                    <div class="member-avatar">
-                                        <img src="{{ url('/') }}/assets/images/mem-2.png" alt="Member">
-                                    </div>
-                                    <div class="member-content">
-                                        <h4 class="name">Miriam Jesus</h4>
-                                        <div class="position">UX, UI Designer</div>
-                                        <ul class="share">
-                                            <li class="twitter"><a href="#" title="twitter"><i class="lab la-twitter"></i></a></li>
-                                            <li class="linkedin"><a href="#" title="linkedin"><i class="lab la-linkedin-in"></i></a></li>
-                                            <li class="instagram"><a href="#" title="instagram"><i class="lab la-instagram"></i></a></li>
-                                        </ul>
+                        @forelse($team as $i)
+                            <div class="col-lg-4">
+                                <div class="member-box align-center">
+                                    <div class="inner">
+                                        <div class="member-avatar">
+                                            <img src="{{ url('/') }}/storage/{{ $i->image }}" alt="Member">
+                                        </div>
+                                        <div class="member-content">
+                                            <h4 class="name">{{ $i->getTranslatedAttribute("name") }}</h4>
+                                            <div class="position">{{ $i->getTranslatedAttribute("work_desc") }}</div>
+                                            <ul class="share">
+                                                <li class="twitter"><a href="{{ $i->fb }}" title="twitter"><i class="lab la-facebook"></i></a></li>
+                                                <li class="linkedin"><a href="{{ $i->twitter }}" title="linkedin"><i class="lab la-twitter"></i></a></li>
+                                                <li class="instagram"><a href="{{ $i->instagram }}" title="instagram"><i class="lab la-instagram"></i></a></li>
+                                                <li class="instagram"><a href="{{ $i->linkedin }}" title="instagram"><i class="lab la-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="member-box align-center">
-                                <div class="inner">
-                                    <div class="member-avatar">
-                                        <img src="{{ url('/') }}/assets/images/mem-3.png" alt="Member">
-                                    </div>
-                                    <div class="member-content">
-                                        <h4 class="name">John Doe</h4>
-                                        <div class="position">Head of Makerting</div>
-                                        <ul class="share">
-                                            <li class="twitter"><a href="#" title="twitter"><i class="lab la-twitter"></i></a></li>
-                                            <li class="linkedin"><a href="#" title="linkedin"><i class="lab la-linkedin-in"></i></a></li>
-                                            <li class="instagram"><a href="#" title="instagram"><i class="lab la-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                            NO Data
+                        @endforelse
                     </div>
-                    <div class="button-wrap align-center">
-                        <a href="our-team.html" class="button fullfield">View All Team</a>
-                    </div>
+{{--                    <div class="button-wrap align-center">--}}
+{{--                        <a href="our-team.html" class="button fullfield">View All Team</a>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </section>

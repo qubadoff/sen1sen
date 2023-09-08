@@ -1,5 +1,5 @@
 @extends('Frontend.Layouts.app')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Site name"))
+@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Sen1Sen"))
 
 @section('content')
     <!-- BEGIN SITE MAIN -->
@@ -12,21 +12,22 @@
                             <div class="pdr100">
                                 <div class="heading mb32">
                                     <h2 class="heading-title size-xl">
-                                        {{__("“Sən1Sən” platforması MG Consulting şirkətinin sosial layihəsidir.")}}
+                                        {{__("Sen1Sen")}}<br/>
+                                        {{__("Fayda ilə Dostluğun birləşdiyi tək platformadır.")}}
                                     </h2>
                                     <div class="heading-desc">
-                                        {{__("Bu platforma Azərbaycan gənclərini həvəsləndirmək, onların bacarıqlarını inkişaf etdirmək və karyera qurulmasında dəstək olmaq məqsədi daşıyır.")}}
+                                        {{__("Sən1Sən MG Consulting-in gənclər üçün olan sosial layihəsidir.")}}
                                     </div>
                                 </div>
                                 <div class="button-wrap">
-                                    <a href="contact-01.html" class="button fullfield" title="Les't talk - Send a message">
-                                        {{__("Read more")}}
+                                    <a href="{{ route("about") }}" class="button fullfield" title="Les't talk - Send a message">
+                                        {{__("Ətraflı")}}
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <img class="wow animate__zoomIn" src="assets/images/hst-01.png" alt="Image">
+                            <img class="wow animate__zoomIn" src="{{ url('/') }}/assets/images/hst-01.png" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -35,45 +36,67 @@
                 <div class="container">
                     <div class="block-icon-box layout-13">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-navy">
-                                            <i class="las la-shield-alt"></i>
+                                            <i class="las la-question-circle"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">24/7 Support</h3>
-                                            <div class="desc">Nunc molestie tellus sapien, quis laoreet orci.</div>
+                                            <h3 class="title">{{__("Niyə Video CV?")}}</h3>
+                                            <div class="desc">
+                                                {{__("İş tapmaqda yeni, ən müasir yanaşma bizdə. Video CV!")}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-yellow">
-                                            <i class="las la-puzzle-piece"></i>
+                                            <i class="las la-file-alt"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">Take Ownership</h3>
-                                            <div class="desc">Nunc molestie tellus sapien, quis laoreet orci.</div>
+                                            <h3 class="title">
+                                                {{__("Aktiv Layihələr")}}
+                                            </h3>
+                                            <div class="desc">
+                                                {{__("Ölkədə gənclərə aid aktiv layihələri rahatlığınız üçün buraya topladıq.")}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-red">
-                                            <i class="las la-umbrella"></i>
+                                            <i class="las la-microphone"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">Team Work</h3>
-                                            <div class="desc">Nunc molestie tellus sapien, quis laoreet orci.</div>
+                                            <h3 class="title">{{__("Bizə deyin")}}</h3>
+                                            <div class="desc">
+                                                {{__("Sizin problemlərinizi işıqlandırmaq bizim işimizdir.")}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3">
+                                <div class="icon-box">
+                                    <div class="inner">
+                                        <div class="icon background-navy-2">
+                                            <i class="las la-handshake"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">{{__("Dəyərimiz")}}</h3>
+                                            <div class="desc">{{__("Fərq qoymadan bütün gənclərin yanındayıq.")}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -84,21 +107,25 @@
                         <div class="col-lg-6 lg-order-2">
                             <div class="pdr80 lg-mt32">
                                 <div class="heading mb24">
-                                    <div class="heading-sub color-navy">{{__("Our Goal")}}e</div>
                                     <h2 class="heading-title size-l">
-                                        {{__("Azərbaycanda işsizlik səviyyəsini aşağı salmaq, gənclərin işlə təmin olunmasına nail olmaq və iş axtaranların müvafiq bacarıqlarını inkişaf etdirməkdir.")}}
+                                        {{__("Azərbaycanda ilk VideoCV platforması")}}
                                     </h2>
+                                    <div class="heading-desc">
+                                        {{__("Video CV var - Iş səni tapar !")}}
+                                    </div>
                                 </div>
-                                <div class="button-wrap mt32"><a href="contact-01.html" class="button fullfield" title="Get in touch">
-                                        {{__("Read more")}}
-                                    </a></div>
+                                <div class="button-wrap mt32">
+                                    <a href="{{ route("cv") }}" class="button fullfield" title="Get in touch">
+                                        {{__("Video CV yüklə")}}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 lg-order-1">
                             <div class="pdl80">
                                 <div class="images layout-02">
                                     <div class="inner">
-                                        <img class="wow animate__fadeInLeft" src="assets/images/hst-03.svg" alt="Image">
+                                        <img class="wow animate__fadeInLeft" src="{{ url('/') }}/assets/images/hst-03.svg" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -113,19 +140,19 @@
                             <div class="pdr60 lg-pdt30 lg-pdb30">
                                 <div class="heading heading-alway-dark mb32">
                                     <h2 class="heading-title size-l">
-                                        {{__("“Hər bir gəncin öz güclü tərəfləri var. Onları müəyyən etməklə, gəncləri düzgün istiqamətləndirməklə onların həyatlarında dönüş yaradırıq”")}}
+                                        {{__("Hər bir gəncin güclü tərəfi var. Səni uğura aparacaq gücü taparıq.")}}
                                     </h2>
                                 </div>
                                 <div class="button-wrap">
                                     <a href="#" class="button borderline-dark" title="Read more story">
-                                        {{__("Fəridə Quluzadə, Sən1Sən layihəsinin rəhbəri.")}}
+                                        {{__("Fəridə Quluzadə")}}
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="pdl100">
-                                <img class="wow animate__fadeInRight" src="assets/images/hst-04.png" alt="Image">
+                                <img class="wow animate__fadeInRight" src="{{ url('/') }}/storage/{{ setting('site.owner_photo') }}" alt="Image">
                             </div>
                         </div>
                     </div>
@@ -134,84 +161,26 @@
             <section class="section spdtb">
                 <div class="container">
                     <div class="heading align-center">
-                        <h2 class="heading-title size-l">{{__("Our Services")}}</h2>
+                        <h2 class="heading-title size-l">{{__("Xidmətlərimiz")}}</h2>
                     </div>
                     <div class="block-icon-box layout-03">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-01.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">{{__("Gənclərin daxili inamını artırmağa yönələn müxtəlif fəaliyyətlər")}}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-03.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">{{__("İşsizliyin səbəblərini araşdırmaq və müvafiq qurumlara təkliflər hazırlamaq")}}</h3>
+                            @forelse($services as $i)
+                                <div class="col-lg-6">
+                                    <div class="icon-box p48">
+                                        <div class="inner">
+                                            <div class="icon">
+                                                <img src="{{ url('/') }}/assets/images/services-06.svg" alt="Icon">
+                                            </div>
+                                            <div class="content">
+                                                <h3 class="title">{{ $i->getTranslatedAttribute("name") }}</h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-04.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">{{__("Təlim və yenidən təlim (re-training) təklif etmək ")}}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-05.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">{{__("CV hazırlanması")}}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-06.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">{{__("İş bazarına dair məsləhətlərin verilməsi. ")}}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="icon-box p48">
-                                    <div class="inner">
-                                        <div class="icon">
-                                            <img src="assets/images/services-02.svg" alt="Icon">
-                                        </div>
-                                        <div class="content">
-                                            <h3 class="title">
-                                                {{__("Azərbaycan ilk dəfə olaraq “Video CV” formatı (iş axtaran gənclər özləri və  təcrübələri haqqında qısa video CV vasitəsi ilə potensial iş axtaranlara çıxış əldə edir)")}}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @empty
+                                No Data !
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -222,46 +191,32 @@
                         <div class="row flex-align-c">
                             <div class="col-lg-6">
                                 <div class="image">
-                                    <img class="wow animate__fadeInRight" src="assets/images/hst-05.svg" alt="Banner">
+                                    <img class="wow animate__fadeInRight" src="{{ url('/') }}/assets/images/hst-05.svg" alt="Banner">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="content lg-mt32 pdl60">
                                     <div class="heading mb32">
-                                        <div class="heading-sub color-navy">Insight</div>
-                                        <h2 class="heading-title size-l">Insight that drives change</h2>
-                                        <div class="heading-desc">It is a long established fact that a reader will be distracted by the readable content</div>
+                                        <h2 class="heading-title size-l">{{__("Statistika")}}</h2>
+                                        <div class="heading-desc">
+                                            {{__("Hər bir layihədən əvvəl, araşdırma mütləqdir!")}}
+                                        </div>
                                     </div>
                                     <div class="block-counter layout-03">
                                         <div class="row">
                                             <div class="col-lg-6 col-6">
                                                 <div class="counter-box">
-                                                    <div class="number"><span class="counter">98</span><span class="suffix color-navy">%</span></div>
-                                                    <div class="title">Private Office</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-6">
-                                                <div class="counter-box">
                                                     <div class="number"><span class="counter">20</span><span class="suffix color-navy">+</span></div>
-                                                    <div class="title">Coworking Desks</div>
+                                                    <div class="title">{{__("Fokus qrup və araşdırmaq")}}</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-6">
                                                 <div class="counter-box">
-                                                    <div class="number"><span class="counter">100</span><span class="suffix color-navy">+</span></div>
-                                                    <div class="title">Meeting Rooms</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-6">
-                                                <div class="counter-box">
-                                                    <div class="number"><span class="counter">55</span><span class="suffix color-navy">%</span></div>
-                                                    <div class="title">Meeting Rooms</div>
+                                                    <div class="number"><span class="counter">500</span><span class="suffix color-navy">+</span></div>
+                                                    <div class="title">{{__("Gənclər arasında sorğu")}}</div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="button-wrap">
-                                        <a href="contact-01.html" class="button fullfield">Get in touch</a>
                                     </div>
                                 </div>
                             </div>
@@ -272,8 +227,9 @@
             <section class="section background-grey spdtb">
                 <div class="container">
                     <div class="heading align-center">
-                        <div class="heading-sub color-navy">testimonial</div>
-                        <h2 class="heading-title size-l">People who already love us</h2>
+                        <h2 class="heading-title size-l">
+                            {{__("Uğurun sirri...")}}
+                        </h2>
                     </div>
                     <div class="block-testimonial layout-01">
                         <div
@@ -292,127 +248,68 @@
                             data-es="1"
                         >
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <p>"Easy to follow but incredibly insightful tutorials. Makes learning new software and techniques and real pleasure everyday! Keep up the good work"</p>
-                                        <div class="meta">
-                                            <div class="author">
-                                                <div class="avatar">
-                                                    <img src="assets/images/post-author-01.jpg" alt="Avatar">
-                                                    <i class="las la-quote-right"></i>
-                                                </div>
-                                                <div class="info">
-                                                    <div class="name">Iruka Akuchi</div>
-                                                    <div class="position">Assistant Post Order, Wipple</div>
-                                                </div>
-                                            </div>
-                                            <div class="logo"><img src="assets/images/client-01.webp" alt="Logo"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <p>"Easy to follow but incredibly insightful tutorials. Makes learning new software and techniques and real pleasure everyday! Keep up the good work"</p>
-                                        <div class="meta">
-                                            <div class="author">
-                                                <div class="avatar">
-                                                    <img src="assets/images/post-author-02.jpg" alt="Avatar">
-                                                    <i class="las la-quote-right"></i>
-                                                </div>
-                                                <div class="info">
-                                                    <div class="name">Erika Mateo</div>
-                                                    <div class="position">COO Tinuclues</div>
+                                @forelse($testimonials as $i)
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <p>
+                                                {!! $i->getTranslatedAttribute("body") !!}
+                                            </p>
+                                            <div class="meta">
+                                                <div class="author">
+                                                    <div class="avatar">
+                                                        <img src="{{ url('/') }}/storage/{{ $i->image }}" alt="Avatar">
+                                                    </div>
+                                                    <div class="info">
+                                                        <div class="name">
+                                                            {{ $i->getTranslatedAttribute("name") }} <br/>
+                                                            {{ $i->getTranslatedAttribute("work_desc") }}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="logo"><img src="assets/images/client-02.webp" alt="Logo"></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <p>"Easy to follow but incredibly insightful tutorials. Makes learning new software and techniques and real pleasure everyday! Keep up the good work"</p>
-                                        <div class="meta">
-                                            <div class="author">
-                                                <div class="avatar">
-                                                    <img src="assets/images/post-author-02.jpg" alt="Avatar">
-                                                    <i class="las la-quote-right"></i>
-                                                </div>
-                                                <div class="info">
-                                                    <div class="name">Anna Ly</div>
-                                                    <div class="position">Copywriter Vimeo</div>
-                                                </div>
-                                            </div>
-                                            <div class="logo"><img src="assets/images/client-03.webp" alt="Logo"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @empty
+                                    No data !
+                                @endforelse
                             </div>
                             <div class="swiper-pagination testimonial-pagination"></div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section class="section spdt">
                 <div class="block-blog">
                     <div class="container">
                         <div class="heading align-center">
-                            <h2 class="heading-title size-l">From our blog</h2>
+                            <h2 class="heading-title size-l">
+                                {{__("Yeniliklər")}}
+                            </h2>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-sm-12">
-                                <article class="post post-grid">
-                                    <div class="entry-thumbnail">
-                                        <a href="#" title="Top 6 Membership Sites for Beginners">
-                                            <img src="assets/images/post-01.jpg" alt="Top 6 Membership Sites for Beginners">
-                                        </a>
-                                    </div>
-                                    <div class="entry-content">
-                                        <div class="entry-category">
-                                            <a href="#" title="Marketing">Marketing</a>
-                                            <a href="#" title="Creative">Creative</a>
+                            @forelse($posts as $post)
+                                <div class="col-lg-4 col-sm-12">
+                                    <article class="post post-grid">
+                                        <div class="entry-thumbnail">
+                                            <a href="{{ route("singleNews", ['slug' => $post->slug]) }}" title="{{ $post->getTranslatedAttribute("title") }}">
+                                                <img src="{{ url('/') }}/storage/{{ $post->image }}" alt="{{ $post->getTranslatedAttribute("title") }}">
+                                            </a>
                                         </div>
-                                        <div class="entry-title">
-                                            <h3><a href="#" title="Top 6 Membership Sites for Beginners">Top 6 Membership Sites for Beginners</a></h3>
+                                        <div class="entry-content">
+                                            <div class="entry-title">
+                                                <h3>
+                                                    <a href="{{ route("singleNews", ['slug' => $post->slug]) }}" title="Top 6 Membership Sites for Beginners">
+                                                        {{ $post->getTranslatedAttribute("title") }}
+                                                    </a>
+                                                </h3>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-lg-4 col-sm-12">
-                                <article class="post post-grid">
-                                    <div class="entry-thumbnail">
-                                        <a href="#" title="How to become a web designer in 2022">
-                                            <img src="assets/images/post-02.jpg" alt="How to become a web designer in 2022">
-                                        </a>
-                                    </div>
-                                    <div class="entry-content">
-                                        <div class="entry-category">
-                                            <a href="#" title="Tutorials">Tutorials</a>
-                                            <a href="#" title="Ui/Ux Design">Ui/Ux Design</a>
-                                        </div>
-                                        <div class="entry-title">
-                                            <h3><a href="#" title="How to become a web designer in 2022">How to become a web designer in 2022</a></h3>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-lg-4 col-sm-12">
-                                <article class="post post-grid">
-                                    <div class="entry-thumbnail">
-                                        <a href="#" title="20 best affiliate programs for online creators in 2022">
-                                            <img src="assets/images/post-03.jpg" alt="20 best affiliate programs for online creators in 2022">
-                                        </a>
-                                    </div>
-                                    <div class="entry-content">
-                                        <div class="entry-category">
-                                            <a href="#" title="Resources">Resources</a>
-                                            <a href="#" title="Tutorials">Tutorials</a>
-                                        </div>
-                                        <div class="entry-title">
-                                            <h3><a href="#" title="20 best affiliate programs for online creators in 2022">20 best affiliate programs for online creators in 2022</a></h3>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                                    </article>
+                                </div>
+                            @empty
+                                No data !
+                            @endforelse
                         </div>
                     </div>
                 </div>

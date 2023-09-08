@@ -25,7 +25,7 @@
                     <div class="logo">
                         <a href="{{ route("index") }}">
                             <h2>
-                                Sen1Sen
+                                {{__("Sen1Sen")}}
                             </h2>
                         </a>
                     </div>
@@ -39,9 +39,9 @@
                             <span class="item menu-close"><i class="las la-times"></i></span>
                         </div>
                         <ul>
-                            <li class="is-normal-menu"><a href="{{ route("index") }}">{{__("Home")}}</a></li>
-                            <li class="is-normal-menu"><a href="{{ route("about") }}">{{__("About us")}}</a></li>
-                            <li class="is-normal-menu"><a href="{{ route("projects") }}">{{__("Our Projects")}}</a></li>
+                            <li class="is-normal-menu"><a href="{{ route("index") }}">{{__("Ana səhifə")}}</a></li>
+                            <li class="is-normal-menu"><a href="{{ route("about") }}">{{__("Haqqımızda")}}</a></li>
+                            <li class="is-normal-menu"><a href="{{ route("projects") }}">{{__("Proyektlərimiz")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("cv") }}">{{__("Video CV")}}</a></li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="buttons">
                         <a href="{{ route("contact") }}" class="button fullfield">
                             <i class="las la-phone"></i>
-                            <span>{{__("Contact Us")}}</span></a>
+                            <span>{{__("Bizimlə Əlaqə")}}</span></a>
                     </div>
                 </div>
             </div>

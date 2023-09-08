@@ -13,14 +13,20 @@ class Cv extends Model
     protected $fillable =[
         'name',
         'surname',
+        'father_name',
         'age',
         'education',
+        'education_school_name',
+        'speciality',
         'experience',
+        'computer_skills',
+        'hobby',
         'language',
         'city',
         'email',
         'phone',
         'cv_file',
+        'cv_video',
         'cv_status',
         'information'
     ];
