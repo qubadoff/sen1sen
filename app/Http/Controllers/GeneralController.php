@@ -147,8 +147,8 @@ class GeneralController extends Controller
             $save->information = $request->input('information');
             $save->cv_status = 'pending';
 
-            $save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => "User IP :" . $request->ip() ]]);
-            $save->cv_video = json_encode([["download_link" => $path.$cvVideoName,"original_name" => "User IP :" . $request->ip() ]]);
+            $save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => $cvFileName ]]);
+            $save->cv_video = json_encode([["download_link" => $path.$cvVideoName,"original_name" => $cvVideoName ]]);
             $save->save();
 
 
