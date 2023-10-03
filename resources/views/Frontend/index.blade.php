@@ -43,7 +43,7 @@
                                             <i class="las la-question-circle"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">{{__("Niyə Video CV?")}}</h3>
+                                            <h3 class="title">{{__("Video CV")}}</h3>
                                             <div class="desc">
                                                 {{__("İş tapmaqda yeni, ən müasir yanaşma bizdə. Video CV!")}}
                                             </div>
@@ -75,7 +75,7 @@
                                             <i class="las la-microphone"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">{{__("Bizə deyin")}}</h3>
+                                            <h3 class="title">{{__("İşıq yolu")}}</h3>
                                             <div class="desc">
                                                 {{__("Sizin problemlərinizi işıqlandırmaq bizim işimizdir.")}}
                                             </div>
@@ -90,7 +90,7 @@
                                             <i class="las la-handshake"></i>
                                         </div>
                                         <div class="content">
-                                            <h3 class="title">{{__("Dəyərimiz")}}</h3>
+                                            <h3 class="title">{{__("Dostluq")}}</h3>
                                             <div class="desc">{{__("Fərq qoymadan bütün gənclərin yanındayıq.")}}</div>
                                         </div>
                                     </div>
@@ -140,7 +140,7 @@
                             <div class="pdr60 lg-pdt30 lg-pdb30">
                                 <div class="heading heading-alway-dark mb32">
                                     <h2 class="heading-title size-l">
-                                        {{__("Hər bir gəncin güclü tərəfi var. Səni uğura aparacaq gücü taparıq.")}}
+                                        {{__("Hər bir gəncin güclü tərəfi var. Səni uğura aparacaq gücü birlikdə taparıq.")}}
                                     </h2>
                                 </div>
                                 <div class="button-wrap">
@@ -170,7 +170,7 @@
                                     <div class="icon-box p48">
                                         <div class="inner">
                                             <div class="icon">
-                                                <img src="{{ url('/') }}/assets/images/services-06.svg" alt="Icon">
+                                                <img src="{{ url('/') }}/storage/{{ $i->image }}" alt="Icon">
                                             </div>
                                             <div class="content">
                                                 <h3 class="title">{{ $i->getTranslatedAttribute("name") }}</h3>

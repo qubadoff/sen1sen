@@ -14,7 +14,7 @@
                                 </a>
                             </div>
                             <p>
-                                {{__("Gənclərin keçmişini araşdırmaq, bu gününü qiymətləndirmək üçün yox, gələcəyini qurmaq üçün var.")}}
+                                {{__("Gənclərin keçmişini araşdırmaq, bu gününü qiymətləndirmək üçün yox, gələcəyini qurmaq üçündür.")}}
                             </p>
                         </div>
                     </div>
