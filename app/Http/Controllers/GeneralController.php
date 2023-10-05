@@ -21,7 +21,8 @@ class GeneralController extends Controller
     public function index(): View
     {
         $posts = Post::latest()->paginate(3);
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::orderBy('sort', 'ASC')
+        ->get();
         $services = Service::all();
 
         return \view('Frontend.index', compact('posts', 'testimonials', 'services'));
