@@ -161,7 +161,8 @@ class GeneralController extends Controller
 
     public function News(): View
     {
-        $news = Post::paginate(10);
+        $news = Post::latest('created_at')
+        ->paginate(10);
 
         return \view('Frontend.News', compact('news'));
     }
