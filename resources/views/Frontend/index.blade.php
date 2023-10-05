@@ -311,6 +311,13 @@
                                 No data !
                             @endforelse
                         </div>
+                        <div class="button-wrap mt32">
+                            <a href="{{ route("News") }}" class="button fullfield" title="Get in touch">
+                                {{__("Bütün yeniliklər")}}
+                            </a>
+                        </div>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
             </section>

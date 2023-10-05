@@ -17,6 +17,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
 
     Route::get('/contact-us', [GeneralController::class, 'contact'])->name('contact');
 
+    Route::get('/news', [GeneralController::class, 'News'])->name('News');
     Route::get('/news/{slug}', [GeneralController::class, 'singleNews'])->name('singleNews');
 
     Route::get('/video-cv', [GeneralController::class, 'cv'])->name('cv');

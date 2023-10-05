@@ -41,6 +41,7 @@
                         <ul>
                             <li class="is-normal-menu"><a href="{{ route("index") }}">{{__("Ana səhifə")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("about") }}">{{__("Haqqımızda")}}</a></li>
+                            <li class="is-normal-menu"><a href="{{ route("News") }}">{{__("Yeniliklər")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("projects") }}">{{__("Proyektlərimiz")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("cv") }}">{{__("Video CV")}}</a></li>
                         </ul>

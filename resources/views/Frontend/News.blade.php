@@ -1,5 +1,5 @@
 @extends('Frontend.Layouts.app')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Proyektlərimiz"))
+@section('pageTitle', isset($pageTitle) ? $pageTitle : __("Bütün yeniliklər"))
 
 @section('content')
     <section class="section spdt">
@@ -7,23 +7,23 @@
             <div class="container">
                 <div class="heading align-center">
                     <h2 class="heading-title size-l">
-                        {{__("Bizim Proyektlərimiz")}}
+                        {{__("Bütün yeniliklər")}}
                     </h2>
                 </div>
                 <div class="row">
-                    @forelse($projects as $post)
+                    @forelse($news as $post)
                         <div class="col-lg-4 col-sm-12">
                             <article class="post post-grid">
                                 <div class="entry-thumbnail">
-                                    <a href="{{ route("singleProject", ['slug' => $post->slug]) }}" title="{{ $post->getTranslatedAttribute("name") }}">
-                                        <img src="{{ url('/') }}/storage/{{ $post->image }}" alt="{{ $post->getTranslatedAttribute("name") }}">
+                                    <a href="{{ route("singleNews", ['slug' => $post->slug]) }}" title="{{ $post->getTranslatedAttribute("title") }}">
+                                        <img src="{{ url('/') }}/storage/{{ $post->image }}" alt="{{ $post->getTranslatedAttribute("title") }}">
                                     </a>
                                 </div>
                                 <div class="entry-content">
                                     <div class="entry-title">
                                         <h3>
-                                            <a href="{{ route("singleProject", ['slug' => $post->slug]) }}" title="">
-                                                {{ $post->getTranslatedAttribute("name") }}
+                                            <a href="{{ route("singleNews", ['slug' => $post->slug]) }}" title="Top 6 Membership Sites for Beginners">
+                                                {{ $post->getTranslatedAttribute("title") }}
                                             </a>
                                         </h3>
                                     </div>

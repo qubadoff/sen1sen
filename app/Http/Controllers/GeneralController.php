@@ -158,6 +158,14 @@ class GeneralController extends Controller
         return back()->with('success', 'Sizin Video CV uğurla göndərildi !');
     }
 
+
+    public function News(): View
+    {
+        $news = Post::paginate(10);
+
+        return \view('Frontend.News', compact('news'));
+    }
+
     public function singleNews($locale, string $slug): View
     {
         $news = Post::where('slug', $slug)->first();

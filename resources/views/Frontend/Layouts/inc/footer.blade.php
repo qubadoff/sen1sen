@@ -24,6 +24,7 @@
                             <ul>
                                 <li><a href="{{ route("index") }}" title="Ana Səhifə">{{__("Ana Səhifə")}}</a></li>
                                 <li><a href="{{ route("about") }}" title="Haqqımızda">{{__("Haqqımızda")}}</a></li>
+                                <li><a href="{{ route("News") }}" title="Yeniliklər">{{__("Yeniliklər")}}</a></li>
                                 <li><a href="{{ route("projects") }}" title="Our Projects">{{__("Proyektlərimiz")}}</a></li>
                                 <li><a href="{{ route("cv") }}" title="Video CV">{{__("Video CV")}}</a></li>
                             </ul>
