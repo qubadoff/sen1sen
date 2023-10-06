@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="heading align-center">
                     <h2 class="heading-title size-l">
-                        {{__("Bizim Proyektlərimiz")}}
+                        {{__("Bizim Layihələrimiz")}}
                     </h2>
                 </div>
                 <div class="row">

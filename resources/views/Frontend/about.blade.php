@@ -34,9 +34,9 @@
                 <div class="row flex-align-c">
                     <div class="col-lg-6">
                         <div class="text-left pdr80">
-                            <h2>{{__("Bizim misiyamız")}}</h2>
+                            <h2>{{__("Bizim missiyamız")}}</h2>
                             <p>
-                                {{__("Gənclərin keçmişini araşdırmaq Bu gününü qiymətləndirmək Yox Bizim işimiz Gələcəklərini qurmaqdlr!")}}
+                                Gənclərin keçmişini araşdırmaq, <br/> Bu gününü qiymətləndirmək yox </br> Bizim işimiz Gələcəklərini qurmaqdır.
                             </p>
                         </div>
                     </div>
