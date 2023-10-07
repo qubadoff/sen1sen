@@ -12,8 +12,7 @@
                             <div class="pdr100">
                                 <div class="heading mb32">
                                     <h2 class="heading-title size-xl">
-                                        {{__("Sen1Sen")}}<br/>
-                                        {{__("Fayda ilə Dostluğun birləşdiyi tək platformadır.")}}
+                                        {{__("Fayda və Dostluğ Sən1Sən də birləşir.")}}
                                     </h2>
                                     <div class="heading-desc">
                                         {{__("Sən1Sən MG Consulting-in gənclər üçün olan sosial layihəsidir.")}}
@@ -34,9 +33,12 @@
             </section>
             <section class="section spdt">
                 <div class="container">
+                    <div class="heading align-center">
+                        <h2 class="heading-title size-l">{{__("Özəlliklərimiz")}}</h2>
+                    </div>
                     <div class="block-icon-box layout-13">
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-6">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-navy">
@@ -51,7 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-6">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-yellow">
@@ -68,7 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-6">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-red">
@@ -83,7 +85,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-6">
+                                <div class="icon-box">
+                                    <div class="inner">
+                                        <div class="icon background-navy-2">
+                                            <i class="las la-place-of-worship"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">{{__("Faydalarımız")}}</h3>
+                                            <div class="desc">{{__("Sənin iş həyatına lazım olan treyninqlər.")}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
                                 <div class="icon-box">
                                     <div class="inner">
                                         <div class="icon background-navy-2">
@@ -97,10 +112,12 @@
                                 </div>
                             </div>
 
+
                         </div>
                     </div>
                 </div>
             </section>
+
             <section class="section spdtb">
                 <div class="container">
                     <div class="row flex-align-c">
@@ -108,15 +125,15 @@
                             <div class="pdr80 lg-mt32">
                                 <div class="heading mb24">
                                     <h2 class="heading-title size-l">
-                                        {{__("Azərbaycanda ilk VideoCV platforması")}}
+                                        Azərbaycanda ilk VideoCV platforması
                                     </h2>
                                     <div class="heading-desc">
-                                        {{__("Video CV var - Iş səni tapar !")}}
+                                        Video CV var - Iş səni tapar !
                                     </div>
                                 </div>
                                 <div class="button-wrap mt32">
-                                    <a href="{{ route("cv") }}" class="button fullfield" title="Get in touch">
-                                        {{__("Video CV yüklə")}}
+                                    <a href="https://sen1sen.az/az/video-cv" class="button fullfield" title="Get in touch">
+                                        Video CV yüklə
                                     </a>
                                 </div>
                             </div>
@@ -125,7 +142,7 @@
                             <div class="pdl80">
                                 <div class="images layout-02">
                                     <div class="inner">
-                                        <img class="wow animate__fadeInLeft" src="{{ url('/') }}/assets/images/hst-03.svg" alt="Image">
+                                        <img class="wow animate__fadeInLeft" src="https://sen1sen.az/assets/images/hst-03.svg" alt="Image" style="visibility: visible; animation-name: fadeInLeft;">
                                     </div>
                                 </div>
                             </div>
@@ -133,6 +150,8 @@
                     </div>
                 </div>
             </section>
+
+
             <section class="section background-yellow">
                 <div class="container">
                     <div class="row flex-align-c">

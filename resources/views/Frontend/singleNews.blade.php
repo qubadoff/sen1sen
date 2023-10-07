@@ -12,13 +12,18 @@
                         <div class="col-lg-12">
                             <div class="content pdr80">
                                 <div class="heading">
+                                    <h2 class="heading-title" style="font-size: 40px;">
+                                        {{ $news->getTranslatedAttribute("title") }}
+                                    </h2>
+                                    <br/>
+                                    <br/>
                                     <div>
                                         <img src="{{ url('/') }}/storage/{{ $news->image }}" alt=""/>
                                     </div>
                                     <br/>
-                                    <h2 class="heading-title" style="font-size: 40px;">
+                                    <div>
                                         {!! $news->getTranslatedAttribute("body") !!}
-                                    </h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>

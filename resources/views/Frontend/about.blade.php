@@ -12,7 +12,7 @@
                         <div class="content pdr80">
                             <div class="heading">
                                 <div class="heading-sub">{{__("Bizim haqqımızda")}}</div>
-                                <h2 class="heading-title" style="font-size: 40px;">
+                                <h2 class="heading-title" style="font-size: 30px;">
                                     {{__("MG-consultinqin bir layihəsi olan S1S biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.")}}
                                 </h2>
                             </div>
@@ -36,7 +36,7 @@
                         <div class="text-left pdr80">
                             <h2>{{__("Bizim missiyamız")}}</h2>
                             <p>
-                                Gənclərin keçmişini araşdırmaq, <br/> Bu gününü qiymətləndirmək yox </br> Bizim işimiz Gələcəklərini qurmaqdır.
+                                Gənclərin keçmişini araşdırmaq, <br/> Bu gününü qiymətləndirmək yox! </br> Bizim işimiz Gələcəklərini qurmaqdır.
                             </p>
                         </div>
                     </div>
