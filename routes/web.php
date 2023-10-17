@@ -21,6 +21,7 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/news/{slug}', [GeneralController::class, 'singleNews'])->name('singleNews');
 
     Route::get('/video-cv', [GeneralController::class, 'cv'])->name('cv');
+    Route::get('/about-video-cv', [GeneralController::class, 'aboutCV'])->name('aboutCV');
     Route::post('/video-cv-upload', [GeneralController::class, 'cv_upload'])->name('cv_upload');
 
 

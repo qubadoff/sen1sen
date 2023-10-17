@@ -26,7 +26,7 @@
                                 <li><a href="{{ route("about") }}" title="Haqqımızda">{{__("Haqqımızda")}}</a></li>
                                 <li><a href="{{ route("News") }}" title="Yeniliklər">{{__("Yeniliklər")}}</a></li>
                                 <li><a href="{{ route("projects") }}" title="Our Projects">{{__("Layihələrimiz")}}</a></li>
-                                <li><a href="{{ route("cv") }}" title="Video CV">{{__("Video CV")}}</a></li>
+                                <li><a href="{{ route("aboutCV") }}" title="Video CV">{{__("Video CV")}}</a></li>
                             </ul>
                         </div>
                     </div>

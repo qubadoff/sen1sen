@@ -53,6 +53,11 @@ class GeneralController extends Controller
         return \view('Frontend.cv', compact('education', 'languages'));
     }
 
+    public function aboutCV(): View
+    {
+        return \view('Frontend.aboutCV');
+    }
+
     public function cv_upload(Request $request)
     {
         $request->validate([

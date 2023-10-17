@@ -101,7 +101,7 @@
                             <div class="col-lg-12">
                                 <div class="icon-box">
                                     <div class="inner">
-                                        <div class="icon background-navy-2">
+                                        <div class="icon background-sen1sen">
                                             <i class="las la-handshake"></i>
                                         </div>
                                         <div class="content">
@@ -118,22 +118,24 @@
                 </div>
             </section>
 
-            <section class="section spdtb">
+            <br/><br/>
+
+            <section class="section spdtb background-yellow">
                 <div class="container">
                     <div class="row flex-align-c">
                         <div class="col-lg-6 lg-order-2">
                             <div class="pdr80 lg-mt32">
                                 <div class="heading mb24">
                                     <h2 class="heading-title size-l">
-                                        Azərbaycanda ilk VideoCV platforması
+                                        {{__("Azərbaycanda ilk VideoCV platforması")}}
                                     </h2>
                                     <div class="heading-desc">
-                                        Video CV var - Iş səni tapar !
+                                        {{__("Video CV var - Iş səni tapar !")}}
                                     </div>
                                 </div>
                                 <div class="button-wrap mt32">
-                                    <a href="https://sen1sen.az/az/video-cv" class="button fullfield" title="Get in touch">
-                                        Video CV yüklə
+                                    <a href="{{ route("aboutCV") }}" class="button fullfield" title="Get in touch">
+                                        {{__("Video CV yüklə")}}
                                     </a>
                                 </div>
                             </div>
@@ -151,32 +153,6 @@
                 </div>
             </section>
 
-
-            <section class="section background-yellow">
-                <div class="container">
-                    <div class="row flex-align-c">
-                        <div class="col-lg-6">
-                            <div class="pdr60 lg-pdt30 lg-pdb30">
-                                <div class="heading heading-alway-dark mb32">
-                                    <h2 class="heading-title size-l">
-                                        {{__("Hər bir gəncin güclü tərəfi var. Səni uğura aparacaq gücü birlikdə taparıq.")}}
-                                    </h2>
-                                </div>
-                                <div class="button-wrap">
-                                    <a href="#" class="button borderline-dark" title="Read more story">
-                                        {{__("Fəridə Quluzadə")}}
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="pdl100">
-                                <img class="wow animate__fadeInRight" src="{{ url('/') }}/storage/{{ setting('site.owner_photo') }}" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="section spdtb">
                 <div class="container">
                     <div class="heading align-center">

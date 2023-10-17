@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="image pdl80">
-                            <img src="{{ url('/') }}/assets/images/banner-image-04.png" alt="Banner">
+                            <img src="{{ url('/') }}/storage/{{ setting('site.owner_photo') }}" alt="Banner">
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,9 @@
             <div class="container">
                 <div class="popup-wrapper ratio" style="--bs-aspect-ratio: 50%">
                     <img src="{{ url('/') }}/assets/images/our-team.jpg" alt="Popup Video">
-                    <a href="{{ setting('site.video_url') }}" target="_blank" class="icon-popup background-navy size-l"><i class="las la-play"></i></a>
+                    <a href="{{ setting('site.video_url') }}" target="_blank" class="icon-popup background-navy size-l">
+                        <i class="las la-play"></i>
+                    </a>
                 </div>
             </div>
         </div>

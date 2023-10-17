@@ -43,7 +43,7 @@
                             <li class="is-normal-menu"><a href="{{ route("about") }}">{{__("Haqqımızda")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("News") }}">{{__("Yeniliklər")}}</a></li>
                             <li class="is-normal-menu"><a href="{{ route("projects") }}">{{__("Layihələrimiz")}}</a></li>
-                            <li class="is-normal-menu"><a href="{{ route("cv") }}">{{__("Video CV")}}</a></li>
+                            <li class="is-normal-menu"><a href="{{ route("aboutCV") }}">{{__("Video CV")}}</a></li>
                         </ul>
                     </div>
                 </div>

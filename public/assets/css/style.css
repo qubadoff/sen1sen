@@ -479,7 +479,11 @@ a:hover {
 }
 
 .background-black {
-  background-color: var(--sala-alway-dark, #111111);
+  background-color: var(--sala-alway-dark, #708090);
+}
+
+.background-sen1sen {
+    background-color: var(--sala-alway-dark, #008000);
 }
 
 .background-alway-white {
