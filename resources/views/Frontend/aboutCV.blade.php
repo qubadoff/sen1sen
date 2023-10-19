@@ -58,7 +58,7 @@
                             <div class="content pdr80">
                                 <div class="heading">
                                     <h2 class="heading-desc" style="font-size: 30px;">
-                                        Çəklişə başlayın və 1-2 dəqidə ərzində özünüzü təqdim edin (təhsil,iş təcrübəniz,şəxsi keyfiyyət və bacarıqlarınız).
+                                        Çəklişə başlayın və 1-2 dəqiqə ərzində özünüzü təqdim edin (təhsil,iş təcrübəniz,şəxsi keyfiyyət və bacarıqlarınız).
                                     </h2>
                                 </div>
                             </div>
