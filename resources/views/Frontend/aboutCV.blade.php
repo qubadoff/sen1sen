@@ -77,29 +77,6 @@
             <section class="section-banner">
                 <div class="container">
                     <div class="row flex-align-c">
-                        <div class="col-lg-6">
-                            <div class="content pdr80">
-                                <div class="heading">
-                                    <h2 class="heading-desc" style="font-size: 30px;">
-                                        MG-consultinqin bir layihəsi olan S1S biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="image pdl80">
-                                <img style="width: 350px; height: 400px;" src="{{ url('/') }}/assets/images/cv/4.png" alt="Banner">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <br/>
-            <hr>
-            <br/>
-            <section class="section-banner">
-                <div class="container">
-                    <div class="row flex-align-c">
                         <div class="col-lg-9">
                             <div class="content pdr80">
                                 <div class="heading">
