@@ -149,9 +149,21 @@
                                         <textarea name="information" id="message" cols="30" rows="10" placeholder="{{__("Digər məlumatları daxil edin")}}"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" name="rules" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">
+                                            <a href="/privacy-policy" style="color: blue" target="_blank">
+                                                Qaydalar
+                                            </a>
+                                            ilə tanış oldum və qəbul edirəm.
+                                        </label>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="col-md-6">
                                     <div class="field-submit">
-                                        <input type="submit" value="{{__("Yüklə")}}" name="submit">
+                                        <input type="submit" value="{{__("Göndər")}}" name="submit">
                                     </div>
                                 </div>
                             </div>
