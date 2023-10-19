@@ -101,7 +101,7 @@
                             <div class="col-lg-12">
                                 <div class="icon-box">
                                     <div class="inner">
-                                        <div class="icon background-sen1sen">
+                                        <div class="icon background-navy">
                                             <i class="las la-handshake"></i>
                                         </div>
                                         <div class="content">
@@ -111,8 +111,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
