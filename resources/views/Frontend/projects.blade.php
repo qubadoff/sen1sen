@@ -2,6 +2,9 @@
 @section('pageTitle', isset($pageTitle) ? $pageTitle : __("Proyektlərimiz"))
 
 @section('content')
+    <br/>
+    <br/>
+    <br/>
     <section class="section spdt">
         <div class="block-blog">
             <div class="container">
