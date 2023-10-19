@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="image pdl80">
-                                <img style="width: 350px; height: 400px;" src="{{ url('/') }}/assets/images/cv/1.png" alt="Banner">
+                                <img style="width: 200px; height: 250px;" src="{{ url('/') }}/assets/images/cv/1.png" alt="Banner">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="image pdl80">
-                                <img style="width: 350px; height: 400px;" src="{{ url('/') }}/assets/images/cv/2.png" alt="Banner">
+                                <img style="width: 200px; height: 250px;" src="{{ url('/') }}/assets/images/cv/2.png" alt="Banner">
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="image pdl80">
-                                <img style="width: 350px; height: 400px;" src="{{ url('/') }}/assets/images/cv/3.png" alt="Banner">
+                                <img style="width: 215px; height: 250px;" src="{{ url('/') }}/assets/images/cv/3.png" alt="Banner">
                             </div>
                         </div>
                     </div>
