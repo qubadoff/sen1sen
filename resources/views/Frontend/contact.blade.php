@@ -51,7 +51,7 @@
                             </div>
                             @if(Session::has('success'))
                                 <div class="alert alert-success">
-                                    {{ Session::get('success') }}
+                                    {{ Session::get('success2') }}
                                     @php
                                         \Illuminate\Support\Facades\Session::forget('success');
                                     @endphp

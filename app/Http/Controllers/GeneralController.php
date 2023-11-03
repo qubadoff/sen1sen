@@ -22,7 +22,7 @@ class GeneralController extends Controller
     {
         $posts = Post::latest()->paginate(3);
         $testimonials = Testimonial::orderBy('sort', 'ASC')
-        ->get();
+                                    ->get();
         $services = Service::all();
 
         return \view('Frontend.index', compact('posts', 'testimonials', 'services'));
@@ -221,7 +221,7 @@ class GeneralController extends Controller
 
         Message::create($request->all());
 
-        return back()->with('success', 'Sizin mesajınız uğurla göndərildi. Təşəkkür edirik !');
+        return back()->with('success2', 'Sizin mesajınız uğurla göndərildi. Təşəkkür edirik !');
     }
 
     public function subscribers(Request $request): string
