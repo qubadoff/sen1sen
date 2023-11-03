@@ -158,10 +158,10 @@ class GeneralController extends Controller
             $save->save();
 
 
-            return back()->with('success', 'Sizin məlumatlarınız uğurla göndərildi !');
+            return back()->with('success1', 'Sizin məlumatlarınız uğurla göndərildi !');
         }
 
-        return back()->with('success', 'Sizin Video CV uğurla göndərildi !');
+        return back()->with('success1', 'Sizin Video CV uğurla göndərildi !');
     }
 
 

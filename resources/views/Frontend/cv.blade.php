@@ -15,9 +15,9 @@
         <div class="container">
                 <div class="col-lg-12">
                     <div class="contact-form layout-01">
-                        @if(Session::has('success'))
+                        @if(Session::has('success1'))
                             <div class="alert alert-success">
-                                {{ Session::get('success') }}
+                                {{ Session::get('success1') }}
                                 @php
                                     \Illuminate\Support\Facades\Session::forget('success');
                                 @endphp
