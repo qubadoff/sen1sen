@@ -75,8 +75,8 @@ class GeneralController extends Controller
             'city' => 'required|max:50',
             'email' => 'required|max:50|email|unique:cv,email',
             'phone' => 'required|max:30|unique:cv,phone',
-            'cv_file' => 'required|mimes:pdf,doc,docx',
-            'cv_video' => 'required|mimes:mp4|max:100000',
+//            'cv_file' => 'required|mimes:pdf,doc,docx',
+            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:200000',
             'information' => 'required|max:5000'
         ],[
             'name.required' => 'Name is Required !',
@@ -110,9 +110,9 @@ class GeneralController extends Controller
             'phone.required' => 'Phone us required !',
             'phone.max' => 'Phone max 30 !',
             'phone.unique' => 'This phone already used !',
-            'cv_file.required' => 'CV File is Required !',
-            'cv_file.mimes' => 'CV File Mimes not allowed !',
-            'cv_file.max' => 'CV File Max 8 MB',
+//            'cv_file.required' => 'CV File is Required !',
+//            'cv_file.mimes' => 'CV File Mimes not allowed !',
+//            'cv_file.max' => 'CV File Max 8 MB',
             'cv_video.required' => 'CV Video is required !',
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
             'cv_video.max' => 'CV Video Max 100 MB !',
@@ -122,18 +122,18 @@ class GeneralController extends Controller
 
         $path = 'cv/September2023/';
 
-        $cvFile = $request->file('cv_file');
+        //$cvFile = $request->file('cv_file');
         $cvVideo = $request->file('cv_video');
 
-        $cvFileName = md5(time().'-'. $request->file('cv_file')->getClientOriginalName());
+        //$cvFileName = md5(time().'-'. $request->file('cv_file')->getClientOriginalName());
         $cvVideoName = md5(time().'-'. $request->file('cv_video')->getClientOriginalName());
 
 
-        $cvFileUpload = Storage::disk('public')->put($path.$cvFileName, (string) file_get_contents($cvFile));
+        //$cvFileUpload = Storage::disk('public')->put($path.$cvFileName, (string) file_get_contents($cvFile));
         $cvVideoUpload = Storage::disk('public')->put($path.$cvVideoName, (string) file_get_contents($cvVideo));
 
 
-        if ($cvFileUpload && $cvVideoUpload)
+        if ($cvVideoUpload)
         {
             $save = new Cv();
             $save->name = $request->input('name');
@@ -153,7 +153,7 @@ class GeneralController extends Controller
             $save->information = $request->input('information');
             $save->cv_status = 'pending';
 
-            $save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => $cvFileName ]]);
+            //$save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => $cvFileName ]]);
             $save->cv_video = json_encode([["download_link" => $path.$cvVideoName,"original_name" => $cvVideoName ]]);
             $save->save();
 

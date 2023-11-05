@@ -131,16 +131,10 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="field-input">
-                                        <label for="cv_file">{{__("CV faylı")}}</label>
-                                        <input type="file" name="cv_file" placeholder="{{__("CV faylı yükləyin")}}" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="field-input">
                                         <label for="cv_video">{{__("Video CV yükləyin")}} *</label>
-                                        <input type="file" name="cv_video" placeholder="{{__("Video CV daxil edin")}}" required>
+                                        <input type="file" name="cv_video" placeholder="{{__("Video CV daxil edin")}}" id="f" data-max-size="200000" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">

@@ -63,7 +63,22 @@
     </a>
     <!-- END BACK TO TOP -->
 </div>
-
+<script>
+    $(function(){
+        $('form').submit(function(){
+            var isOk = true;
+            $('input[type=file][data-max-size]').each(function(){
+                if(typeof this.files[0] !== 'undefined'){
+                    var maxSize = parseInt($(this).attr('max-size'),10),
+                        size = this.files[0].size;
+                    isOk = maxSize > size;
+                    return isOk;
+                }
+            });
+            return isOk;
+        });
+    });
+</script>
 <!-- jQuery -->
 <script src="{{ url('/') }}/assets/js/jquery-1.12.4.js"></script>
 <script src="{{ url('/') }}/assets/libs/bootstrap/js/bootstrap.min.js"></script>
