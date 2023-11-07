@@ -87,5 +87,11 @@
 <script src="{{ url('/') }}/assets/libs/counter/jquery.counterup.min.js"></script>
 <script src="{{ url('/') }}/assets/libs/wowjs/wow.min.js"></script>
 <script src="{{ url('/') }}/assets/js/main.js"></script>
+
+
+
+<script src="//code.tidio.co/rzckv1jdmzehplpoligelosnq0vhrw4j.js" async></script>
+
+
 </body>
 </html>

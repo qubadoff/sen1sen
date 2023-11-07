@@ -76,7 +76,7 @@ class GeneralController extends Controller
             'email' => 'required|max:50|email|unique:cv,email',
             'phone' => 'required|max:30|unique:cv,phone',
 //            'cv_file' => 'required|mimes:pdf,doc,docx',
-            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:200000',
+            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:80000',
             'information' => 'required|max:5000'
         ],[
             'name.required' => 'Name is Required !',
@@ -115,7 +115,7 @@ class GeneralController extends Controller
 //            'cv_file.max' => 'CV File Max 8 MB',
             'cv_video.required' => 'CV Video is required !',
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
-            'cv_video.max' => 'CV Video Max 100 MB !',
+            'cv_video.max' => 'CV Video Max 80 MB !',
             'information.required' => 'Message is required !',
             'information.max' => 'Information Max 5000 !'
         ]);
