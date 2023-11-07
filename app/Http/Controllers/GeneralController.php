@@ -117,7 +117,7 @@ class GeneralController extends Controller
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
             'cv_video.max' => 'CV Video Max 80 MB !',
             'information.required' => 'Message is required !',
-            'information.max' => 'Information Max 5000 !'
+            'information.max' => 'Əlavə məlumat üçün max: 5000 simvol istifadə edilməlidir !'
         ]);
 
         $path = 'cv/September2023/';

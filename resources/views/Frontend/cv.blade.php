@@ -148,7 +148,7 @@
                                 <div class="col-md-12">
                                     <div class="field-input field-textarea">
                                         <label for="message">{{__("Digər məlumatlar")}}</label>
-                                        <textarea name="information" id="message" cols="30" rows="10" placeholder="{{__("Digər məlumatları daxil edin")}}"></textarea>
+                                        <textarea name="information" id="message" cols="30" rows="10" placeholder="{{__("Digər məlumatları daxil edin")}}" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
