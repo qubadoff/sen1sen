@@ -123,7 +123,7 @@
                                         <input type="text" name="education_school_name" placeholder="{{__("Bitirdiyiniz müəsisənin adını daxil edin")}}" required>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="field-input">
                                         <label for="city">{{__("İxtisas")}} *</label>
                                         <input type="text" name="speciality" placeholder="{{__("İxtisasınızı daxil edin")}}" required>

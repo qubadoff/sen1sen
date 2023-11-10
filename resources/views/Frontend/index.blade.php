@@ -12,7 +12,7 @@
                             <div class="pdr100">
                                 <div class="heading mb32">
                                     <h2 class="heading-title size-xl">
-                                        {{__("Fayda və Dostluğ Sən1Sən də birləşir.")}}
+                                        {{__("Fayda və Dostluq Sən1Sən də birləşir.")}}
                                     </h2>
                                     <div class="heading-desc">
                                         {{__("Sən1Sən MG Consulting-in gənclər üçün olan sosial layihəsidir.")}}
