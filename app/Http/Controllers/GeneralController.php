@@ -76,8 +76,7 @@ class GeneralController extends Controller
             'email' => 'required|max:50|email|unique:cv,email',
             'phone' => 'required|max:30|unique:cv,phone',
 //            'cv_file' => 'required|mimes:pdf,doc,docx',
-            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:80000',
-            'information' => 'required|max:5000'
+            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:100000'
         ],[
             'name.required' => 'Name is Required !',
             'name.max' => 'Name max 30 !',
@@ -116,8 +115,6 @@ class GeneralController extends Controller
             'cv_video.required' => 'CV Video is required !',
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
             'cv_video.max' => 'CV Video Max 80 MB !',
-            'information.required' => 'Message is required !',
-            'information.max' => 'Əlavə məlumat üçün max: 5000 simvol istifadə edilməlidir !'
         ]);
 
         $path = 'cv/September2023/';

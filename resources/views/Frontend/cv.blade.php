@@ -13,7 +13,7 @@
             <br/>
             <div class="alert alert-danger" role="alert">
                 <b style="color: black">
-                    Diqqət ! Video uzunluğu max: 1 dəq, həcmi max: 80 MB və fayl tipləri mp4,mov,ogg,flv,3gp,avi,wmv olmalıdır! <br/><br/>
+                    Diqqət ! Video uzunluğu max: 1 dəq, həcmi max: 100 MB və fayl tipləri mp4,mov,ogg,flv,3gp,avi,wmv olmalıdır! <br/><br/>
                     Məlumatlarınızın göndərilmə müddəti internet sürətinizdən aslıdır. Məlumatlarınızı göndərdikdən sonra əməliyyat bitənə qədər gözləyin.
                 </b>
             </div>
@@ -143,12 +143,6 @@
                                     <div class="field-input">
                                         <label for="cv_video">{{__("Video CV yükləyin")}} *</label>
                                         <input type="file" name="cv_video" placeholder="{{__("Video CV daxil edin")}}" id="f" data-max-size="200000" accept="video/*" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="field-input field-textarea">
-                                        <label for="message">{{__("Digər məlumatlar")}}</label>
-                                        <textarea name="information" id="message" cols="30" rows="10" placeholder="{{__("Digər məlumatları daxil edin")}}" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">

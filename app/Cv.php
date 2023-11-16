@@ -27,8 +27,7 @@ class Cv extends Model
         'phone',
         'cv_file',
         'cv_video',
-        'cv_status',
-        'information'
+        'cv_status'
     ];
 
     protected $guarded = [];
