@@ -151,7 +151,14 @@ class GeneralController extends Controller
             $save->phone = $request->input('phone');
             $save->information = $request->input('information');
             $save->cv_status = 'pending';
-            $save->is_private = $request->is_private;
+
+            if (!$request->is_private = null)
+            {
+                $save->is_private = $request->is_private;
+            } else {
+                $save->is_private = 'off';
+            }
+
 
             //$save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => $cvFileName ]]);
             $save->cv_video = json_encode([["download_link" => $path.$cvVideoName,"original_name" => $cvVideoName ]]);
