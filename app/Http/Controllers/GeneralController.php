@@ -75,7 +75,6 @@ class GeneralController extends Controller
             'city' => 'required|max:50',
             'email' => 'required|max:50|email|unique:cv,email',
             'phone' => 'required|max:30|unique:cv,phone',
-//            'cv_file' => 'required|mimes:pdf,doc,docx',
             'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:100000',
             'rules' => 'required'
         ],[
@@ -110,9 +109,6 @@ class GeneralController extends Controller
             'phone.required' => 'Phone us required !',
             'phone.max' => 'Phone max 30 !',
             'phone.unique' => 'This phone already used !',
-//            'cv_file.required' => 'CV File is Required !',
-//            'cv_file.mimes' => 'CV File Mimes not allowed !',
-//            'cv_file.max' => 'CV File Max 8 MB',
             'cv_video.required' => 'CV Video is required !',
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
             'cv_video.max' => 'CV Video Max 80 MB !',
@@ -121,14 +117,10 @@ class GeneralController extends Controller
 
         $path = 'cv/September2023/';
 
-        //$cvFile = $request->file('cv_file');
         $cvVideo = $request->file('cv_video');
 
-        //$cvFileName = md5(time().'-'. $request->file('cv_file')->getClientOriginalName());
-        $cvVideoName = md5(time().'-'. $request->file('cv_video')->getClientOriginalName());
+        $cvVideoName = time().'-'. $request->file('cv_video')->getClientOriginalName();
 
-
-        //$cvFileUpload = Storage::disk('public')->put($path.$cvFileName, (string) file_get_contents($cvFile));
         $cvVideoUpload = Storage::disk('public')->put($path.$cvVideoName, (string) file_get_contents($cvVideo));
 
 
