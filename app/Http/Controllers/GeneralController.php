@@ -152,11 +152,11 @@ class GeneralController extends Controller
             $save->information = $request->input('information');
             $save->cv_status = 'pending';
 
-            if (!$request->is_private = null)
+            if ($request->is_private)
             {
                 $save->is_private = $request->is_private;
             } else {
-                $save->is_private = 'off';
+                $save->is_private = '2';
             }
 
 

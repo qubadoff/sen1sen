@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-check form-switch">
-                                        <input name="rules" class="form-check-input" type="checkbox" name="rules" checked>
+                                        <input name="rules" class="form-check-input" type="checkbox" checked>
                                         <label class="form-check-label" for="flexSwitchCheckChecked">
                                             <a href="/privacy-policy" style="color: blue" target="_blank">
                                                 Qaydalar
@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-check form-switch">
-                                        <input name="is_private" class="form-check-input" type="checkbox" name="rules" checked>
+                                        <input name="is_private" class="form-check-input" type="checkbox" value="1" checked>
                                         <label class="form-check-label" for="flexSwitchCheckChecked">
                                             Məlumatlarımı 3-cü tərəflərlə paylaşmaqa icazə verirəm.
                                         </label>
