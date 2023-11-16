@@ -13,7 +13,7 @@
                             <div class="heading">
                                 <div class="heading-sub">{{__("Bizim haqqımızda")}}</div>
                                 <h2 class="heading-title" style="font-size: 30px;">
-                                    {{__("MG-consultinqin bir layihəsi olan S1S biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.")}}
+                                    MG-consultinqin bir layihəsi olan "Sən1Sən" biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.
                                 </h2>
                             </div>
                             <div class="button-wrap">
