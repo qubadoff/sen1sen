@@ -76,7 +76,8 @@ class GeneralController extends Controller
             'email' => 'required|max:50|email|unique:cv,email',
             'phone' => 'required|max:30|unique:cv,phone',
 //            'cv_file' => 'required|mimes:pdf,doc,docx',
-            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:100000'
+            'cv_video' => 'required|mimes:mp4,mov,ogg,flv,3gp,avi,wmv|max:100000',
+            'rules' => 'required'
         ],[
             'name.required' => 'Name is Required !',
             'name.max' => 'Name max 30 !',
@@ -115,6 +116,7 @@ class GeneralController extends Controller
             'cv_video.required' => 'CV Video is required !',
             'cv_video.mimes' => 'CV Video Mimes not allowed !',
             'cv_video.max' => 'CV Video Max 80 MB !',
+            'rules.required' => 'Zəhmət olmazsa qaydaları qəbul edin !'
         ]);
 
         $path = 'cv/September2023/';
@@ -149,6 +151,7 @@ class GeneralController extends Controller
             $save->phone = $request->input('phone');
             $save->information = $request->input('information');
             $save->cv_status = 'pending';
+            $save->is_private = $request->is_private;
 
             //$save->cv_file = json_encode([["download_link" => $path.$cvFileName,"original_name" => $cvFileName ]]);
             $save->cv_video = json_encode([["download_link" => $path.$cvVideoName,"original_name" => $cvVideoName ]]);
