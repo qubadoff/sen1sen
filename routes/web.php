@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\CvSearchController;
 
 
 Route::group(['prefix' => 'admin'], function () { Voyager::routes(); });
@@ -27,4 +28,9 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
 
     Route::post('/send-message', [GeneralController::class, 'sendMessage'])->name('sendMessage');
     Route::post('/subscribers', [GeneralController::class, 'subscribers'])->name('subscribers');
+
+
+    Route::get('/find-cv', [CvSearchController::class, 'findCv'])->name('cv.search');
+
+
 });

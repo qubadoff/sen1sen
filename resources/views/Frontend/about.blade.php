@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="image pdl80">
-                            <img src="{{ url('/') }}/assets/images/dating-04.png" alt="Banner">
+                            <img src="{{ url('/') }}/storage/{{ setting('site.owner_photo') }}" alt="Banner">
                         </div>
                     </div>
                 </div>
