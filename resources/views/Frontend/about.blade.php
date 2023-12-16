@@ -97,10 +97,10 @@
                                             <h4 class="name">{{ $i->getTranslatedAttribute("name") }}</h4>
                                             <div class="position">{{ $i->getTranslatedAttribute("work_desc") }}</div>
                                             <ul class="share">
-                                                <li class="twitter"><a href="{{ $i->fb }}" title="twitter"><i class="lab la-facebook"></i></a></li>
-                                                <li class="linkedin"><a href="{{ $i->twitter }}" title="linkedin"><i class="lab la-twitter"></i></a></li>
-                                                <li class="instagram"><a href="{{ $i->instagram }}" title="instagram"><i class="lab la-instagram"></i></a></li>
-                                                <li class="instagram"><a href="{{ $i->linkedin }}" title="instagram"><i class="lab la-linkedin"></i></a></li>
+                                                <li class="twitter"><a href="{{ $i->fb }}" target="_blank" title="Facebook"><i class="lab la-facebook"></i></a></li>
+                                                <li class="twitter"><a href="{{ $i->twitter }}" target="_blank" title="Twitter"><i class="lab la-twitter"></i></a></li>
+                                                <li class="twitter"><a href="{{ $i->instagram }}" target="_blank" title="Instagram"><i class="lab la-instagram"></i></a></li>
+                                                <li class="twitter"><a href="{{ $i->linkedin }}" target="_blank" title="Linkedin"><i class="lab la-linkedin"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>

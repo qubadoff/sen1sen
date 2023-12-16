@@ -13,6 +13,12 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setLo
     Route::get('/', [GeneralController::class, 'index'])->name('index');
     Route::get('/about-us', [GeneralController::class, 'about'])->name('about');
 
+    Route::get('/trainings', [GeneralController::class, 'trainings'])->name('trainings');
+    Route::get('/trainings/{slug}', [GeneralController::class, 'singleTrainings'])->name('singleTrainings');
+
+    Route::get('/register-training', [GeneralController::class, 'registerTraining'])->name('registerTraining');
+    Route::post('/register-training-set', [GeneralController::class, 'registerTrainingSet'])->name('registerTrainingSet');
+
     Route::get('/our-projects', [GeneralController::class, 'projects'])->name('projects');
     Route::get('/our-projects/{slug}', [GeneralController::class, 'singleProject'])->name('singleProject');
 

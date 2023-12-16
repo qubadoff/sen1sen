@@ -11,6 +11,8 @@ use App\Service;
 use App\Subscriber;
 use App\Team;
 use App\Testimonial;
+use App\Training;
+use App\TrainingPerson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -238,5 +240,50 @@ class GeneralController extends Controller
 
         return back()->with('success', 'Siz uğurla abunə oldunuz !');
 
+    }
+
+    public function trainings(): View
+    {
+        $tranings = Training::paginate(20);
+
+        return \view('Frontend.trainings', compact('tranings'));
+    }
+
+    public function singleTrainings($locale, $slug): View
+    {
+        $training = Training::where('slug', $slug)->first();
+
+        if (!$training) { abort(404); }
+
+        return \view('Frontend.singleTrainings', compact('training'));
+    }
+
+    public function registerTraining(): View
+    {
+        $trainings = Training::all();
+
+        return \view('Frontend.registerTraining', compact('trainings'));
+    }
+
+    public function registerTrainingSet(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'surname' => 'required|string|max:100',
+            'email' => 'required|email|max:100',
+            'phone' => 'required|string|max:100',
+            'training_id' => 'required|numeric',
+        ],[
+            'name.required' => 'Ad mütləq yazılmalıdır !',
+            'surname.required' => 'Soyad mütləq yazılmalıdır !',
+            'email.required' => 'Email mütləq yazılmalıdır',
+            'email.email' => 'Email type invalid !',
+            'phone.required' => 'Telefon mütləq yazılmalıdır !',
+            'training_id' => 'Təlim seçilməlidir !'
+        ]);
+
+        TrainingPerson::create($request->all());
+
+        return back()->with('success1', 'Təlimdə uğurla qeydiyyatdan keçdiniz. Əməkdaşlarımız sizinlə əlaqə saxlayacaqlar.');
     }
 }
