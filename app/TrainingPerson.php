@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class TrainingPerson extends Model
@@ -20,4 +21,9 @@ class TrainingPerson extends Model
     protected $guarded = [];
 
     protected $casts = [];
+
+    public function training(): BelongsTo
+    {
+        return $this->belongsTo(Training::class);
+    }
 }
