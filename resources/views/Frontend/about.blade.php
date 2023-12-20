@@ -13,6 +13,9 @@
                             <div class="heading">
                                 <div class="heading-sub">{{__("Haqqımızda")}}</div>
                                 <h2 class="heading-title" style="font-size: 30px;">
+                                    MG-consultinqin bir layihəsi olan "Sən1Sən" biliyi və təcrübəsi az olsada ürəyi böyük olan gənclərə dəstək olmaq üçün yaradılıb.
+                                    <br/>
+                                    <br/>
                                     Bizim iş seçimimizdə və ya iş həyatımızda etdiyimiz səhvləri gənclərin təkrar etməməsi  üçün “S1S”layihəsi yaratdıq. Muasir həyatda iş prinsipləri artıq dəyişib. Savadından asılı olmayaraq hər bir gənc şəxsi keyfiyyətlərini, hətda hobbilərini düzgün təqdim edib iş həyatına həm qatıla bilər, həm də uğur qazana bilər.
                                 </h2>
                             </div>
