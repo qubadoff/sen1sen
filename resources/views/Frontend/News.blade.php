@@ -37,6 +37,7 @@
                         No data !
                     @endforelse
                 </div>
+                {{ $news->links() }}
             </div>
         </div>
     </section>
