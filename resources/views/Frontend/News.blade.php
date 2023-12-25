@@ -37,7 +37,7 @@
                         No data !
                     @endforelse
                 </div>
-                {!! $news->links() !!}
+                {{ $news->links() }}
             </div>
         </div>
     </section>
